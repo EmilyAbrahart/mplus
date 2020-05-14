@@ -37,29 +37,29 @@ export default Dungeon;
 
 const DungeonContainer = styled.div`
 	background-image: ${props =>
-		props.name === 'AD' && props.dungeon
+		props.name === 'AD' && props.dungeon.mythic_level
 			? `url(${AD})`
-			: props.name === 'FH' && props.dungeon
+			: props.name === 'FH' && props.dungeon.mythic_level
 			? `url(${FH})`
-			: props.name === 'KR' && props.dungeon
+			: props.name === 'KR' && props.dungeon.mythic_level
 			? `url(${KR})`
-			: props.name === 'ML' && props.dungeon
+			: props.name === 'ML' && props.dungeon.mythic_level
 			? `url(${ML})`
-			: props.name === 'SIEGE' && props.dungeon
+			: props.name === 'SIEGE' && props.dungeon.mythic_level
 			? `url(${SIEGE})`
-			: props.name === 'SOTS' && props.dungeon
+			: props.name === 'SOTS' && props.dungeon.mythic_level
 			? `url(${SOTS})`
-			: props.name === 'TD' && props.dungeon
+			: props.name === 'TD' && props.dungeon.mythic_level
 			? `url(${TD})`
-			: props.name === 'TOS' && props.dungeon
+			: props.name === 'TOS' && props.dungeon.mythic_level
 			? `url(${TOS})`
-			: props.name === 'UNDR' && props.dungeon
+			: props.name === 'UNDR' && props.dungeon.mythic_level
 			? `url(${UNDR})`
-			: props.name === 'WM' && props.dungeon
+			: props.name === 'WM' && props.dungeon.mythic_level
 			? `url(${WM})`
-			: props.name === 'WORK' && props.dungeon
+			: props.name === 'WORK' && props.dungeon.mythic_level
 			? `url(${WORK})`
-			: props.name === 'YARD' && props.dungeon
+			: props.name === 'YARD' && props.dungeon.mythic_level
 			? `url(${YARD})`
 			: props.name === 'AD'
 			? `linear-gradient(black, black),url(${AD})`
@@ -103,6 +103,7 @@ const DungeonContainer = styled.div`
 	.name {
 		position: absolute;
 		top: -13px;
+		color: white;
 		h3 {
 			margin: 0;
 		}

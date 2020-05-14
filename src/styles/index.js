@@ -6,16 +6,16 @@ export const greenAccent = '#3bca8b';
 // Class Colours
 
 export const classColors = {
-	'Death Knight': '#C41F3B',
-	'Demon Hunter': '#A330C9',
-	'Druid': '#FF7D0A',
-	'Hunter': '#A9D271',
-	'Mage': '#40C7EB',
-	'Monk': '#00FF96',
-	'Paladin': '#F58CBA',
-	'Priest': '#FFFFFF',
-	'Rogue': '#FFF569',
-	'Shaman': '#0070DE',
-	'Warlock': '#8787ED',
-	'Warrior': '#C79C6E'
+	'Death Knight': 'rgba(196,31,59,0.8)',
+	'Demon Hunter': 'rgba(163,48,201, 0.8)',
+	'Druid': 'rgba(255,125,10, 0.8)',
+	'Hunter': 'rgba(169,210,113, 0.8)',
+	'Mage': 'rgba(64,199,235, 0.8)',
+	'Monk': 'rgba(0,255,150, 0.8)',
+	'Paladin': 'rgba(245,140,186, 0.8)',
+	'Priest': 'rgba(255,255,255, 0.7)',
+	'Rogue': 'rgba(255,245,105, 0.8)',
+	'Shaman': 'rgba(0,112,222, 0.8)',
+	'Warlock': 'rgba(135,135,237, 0.8)',
+	'Warrior': 'rgba(199,156,110, 0.8)'
 };

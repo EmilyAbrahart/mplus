@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { addCharacter } from '../state/actions/characters';
+import { addCharacter, getCharacterData } from '../state/actions/characters';
 
-const CharacterForm = ({ addCharacter }) => {
+const CharacterForm = ({ addCharacter, getCharacterData }) => {
 	const [name, setName] = useState('');
 	const [server, setServer] = useState('');
 	const [region, setRegion] = useState('');
@@ -24,6 +24,11 @@ const CharacterForm = ({ addCharacter }) => {
 			region
 		};
 		addCharacter(newCharacter);
+		getCharacterData(
+			newCharacter.name,
+			newCharacter.server,
+			newCharacter.region
+		);
 		setName('');
 		setServer('');
 		setRegion('');
@@ -59,33 +64,46 @@ const CharacterForm = ({ addCharacter }) => {
 					handleSubmit();
 				}}
 			>
-				Add
+				ADD
 			</button>
 		</FormContainer>
 	);
 };
 
-export default connect(state => state, { addCharacter })(CharacterForm);
+export default connect(state => state, { addCharacter, getCharacterData })(
+	CharacterForm
+);
 
 const FormContainer = styled.div`
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 
 	form {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
-		justify-content: center;
-		width: 100%;
+		justify-content: flex-start;
 
 		input {
 			margin: 0.5rem;
 			padding: 0.5rem;
-			width: 100%;
+			width: 12rem;
 			box-sizing: border-box;
+		}
+	}
+	button {
+		border: none;
+		color: #2b2b2b;
+		background-color: #3bca8b;
+		width: 5rem;
+		padding: 0.6rem;
+		font-weight: 700;
+		margin: 0.5rem;
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 `;

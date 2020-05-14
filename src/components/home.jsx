@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Heading from './heading';
-import Characters from './characters';
 import CharactersData from './charactersData';
+import Footer from './footer';
 
 const Home = () => {
 	return (
@@ -11,9 +11,9 @@ const Home = () => {
 			<Heading />
 			<HeadingBlock />
 			<MainContentContainer>
-				<Characters />
 				<CharactersData />
 			</MainContentContainer>
+			<Footer />
 		</HomeContainer>
 	);
 };
@@ -35,12 +35,12 @@ const MainContentContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 `;
 
 const HeadingBlock = styled.div`
-width: 100%;
-height: 3.5rem;
-`
+	width: 100%;
+	height: 3.5rem;
+`;
